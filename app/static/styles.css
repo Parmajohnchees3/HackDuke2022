@@ -37,6 +37,19 @@ section h1 {
   white-space: nowrap;
 }
 
+section h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font : normal 300 20px/1 'Josefin Sans', sans-serif;
+  text-align: center;
+  white-space: nowrap;
+}
+
 #section01 { background: url("https://c4.wallpaperflare.com/wallpaper/874/941/205/heart-man-medicine-lungs-wallpaper-preview.jpg") center center / cover no-repeat;}
 #section02 { background: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm378-09-kny9fh3b.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=4d5a73287b905c872e0924f49b3179f8") center center / cover no-repeat;}
 #section03 { background: url("https://static.vecteezy.com/system/resources/previews/003/800/756/original/molecule-or-atom-abstract-clean-structure-for-science-or-medical-background-illustration-vector.jpg") center center / cover no-repeat;}
