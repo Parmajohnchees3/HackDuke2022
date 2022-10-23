@@ -4,12 +4,15 @@
 {% block content %}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-<section id="section07" class="demo">
-  <h1 style="font-size: 27px,">
-    A low cost, innovative solution to at-home spirometry testing.
-    </h1>
-<canvas id="myChart" style="width:100%;max-width:2100px"></canvas>
+<div><canvas id="myChart" style="width:60%;max-width:1000px"></canvas>
+<section id="myResults" class="demo"></div>
+
 </section>
-<script src="static/scripts.js"></script>
+
+<script type="text/javascript">
+  var xValues = JSON.parse('{{data.time | tojson | safe}}')
+  var yValues = JSON.parse('{{data.Velocity | tojson | safe}}')
+</script>
+<script type="text/javascript" src="static/scripts.js"></script>
 
 {% endblock %}

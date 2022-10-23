@@ -1,9 +1,10 @@
-function myFunc(vars)
-  return vars
+function myFunc() {
+  return xValues + yValues
+}
 
-var xValues = [[tdata]];
-var yValues = [];
 
+console.log(xValues);
+console.log(yValues);
 new Chart("myChart", {
   type: "line",
   data: {
@@ -24,13 +25,14 @@ new Chart("myChart", {
         display: true,
         labelString: 'Velocity (m/s)'
       },
-      ticks: {min: 6, max:16}
+      ticks: {min: 0, max:30}
     }],
      xAxes: [{
      scaleLabel: {
      display: true,
      labelString: 'Time (seconds)'
-     }
+     },
+      ticks: {min: 0, max:30}
      }],
      
     },

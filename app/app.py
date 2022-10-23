@@ -38,8 +38,11 @@ def test():
 
 @app.route('/results')
 def results():
-    tdata = {}
-    return render_template("results.html", timedata=tdata, velodata=vdata)
+    data = {'time':["0", "1", "2", "3", "4", "5"], 'Velocity':["1", "5", "8", "10", "10", "20"]}
+    
+    #tdata = [0, 1, 2, 3, 4, 5]
+    #vdata = [1, 5, 8, 10, 10, 10]
+    return render_template("results.html", data = data)
 
 @app.route('/instructions')
 def instructions():
