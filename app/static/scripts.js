@@ -4,7 +4,7 @@ function myFunc() {
 
 
 console.log(xValues);
-console.log(yValues);
+console.log();
 new Chart("myChart", {
   type: "line",
   data: {
@@ -25,14 +25,14 @@ new Chart("myChart", {
         display: true,
         labelString: 'Velocity (m/s)'
       },
-      ticks: {min: 0, max:30}
+      ticks: {min: 0, max:Math.max(...yValues)*1.1}
     }],
      xAxes: [{
      scaleLabel: {
      display: true,
      labelString: 'Time (seconds)'
      },
-      ticks: {min: 0, max:30}
+      ticks: {min: 0, max:1000}
      }],
      
     },

@@ -13,14 +13,7 @@ client = Client(account_sid, auth_token)
 
 app = Flask(__name__)
 
-global currentNum
-
-currentNum = 0
-
-testData = {"time": [0, 1, 2, 3, 4, 5], "velocity": [1, 5, 8, 10, 10, 10]}
-testtext = {"Hello, World!": [0, 1, 2, 3, 4]}
-testJson = json.dumps(testData)
-
+currentResult = ""
 
 @app.route('/')
 def index():
@@ -39,7 +32,9 @@ def test():
 
 @app.route('/results')
 def results():
-    data = testtext
+    data = currentResult
+    if(data == ""):
+      return redirect(url_for("index"))
     
     #tdata = [0, 1, 2, 3, 4, 5]
     #vdata = [1, 5, 8, 10, 10, 10]
@@ -67,9 +62,7 @@ def pricing():
 
 @app.route('/button', methods=['POST'])
 def getbutton():
-    global currentNum
-    global testtext
-    testtext = request.get_json()
+    currentResult = request.get_json()
     return "good job!"
 
 
