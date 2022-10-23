@@ -40,8 +40,8 @@ section h1 {
 
 section h2 {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 54%;
+  left: 51%;
   z-index: 2;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -75,7 +75,7 @@ section h4 {
   white-space: nowrap;
 }
 
-#section01 { background: url(/static/assets/mainscreen.png) center center / cover no-repeat;}
+#section01 { background: url(/static/assets/newhomepage.png) center center / cover no-repeat;}
 #section02 { background: url(/static/assets/192841.png) center center / cover no-repeat;}
 #section03 { background: url(/static/assets/192841.png) center center / cover no-repeat;}
 #section04 { background: url(/static/assets/192841.png) center center / cover no-repeat;}
@@ -459,8 +459,6 @@ section h4 {
   }
 }
 
-
-
 #section08 a {
   padding-top: 60px;
 }
@@ -487,9 +485,6 @@ section h4 {
   border-radius: 100%;
   box-sizing: border-box;
 }
-
-
-
 #section09 a {
   padding-top: 80px;
 }
@@ -530,9 +525,6 @@ section h4 {
   transform: rotate(-45deg);
   box-sizing: border-box;
 }
-
-
-
 #section10 a {
   padding-top: 60px;
 }

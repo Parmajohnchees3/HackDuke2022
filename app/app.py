@@ -1,6 +1,14 @@
 from flask import Flask, render_template, redirect, url_for, request
 import json
 from flask_socketio import SocketIO
+from twilio.rest import Client
+import os
+
+auth_token = os.environ['auth_token']
+account_sid = os.environ['account_sid']
+
+client = Client(account_sid, auth_token)
+
 
 app = Flask(__name__)
 
@@ -23,14 +31,29 @@ def features():
     return "FEATURES"
 
 
-@app.route('/test2')
-def test2():
+@app.route('/test')
+def test():
     return render_template("justChart.html")
 
 
-@app.route('/test')
-def test():
-    return render_template("test.html")
+@app.route('/results')
+def results():
+    tdata = {}
+    return render_template("results.html", timedata=tdata, velodata=vdata)
+
+@app.route('/instructions')
+def instructions():
+
+    #Send TEXT "Your test results are ready to view..."
+    #message = client.messages.create(
+                    #body='Your test results are ready to be viewed',
+                    #from_='+14632558992',
+                    #to='+12569988636'
+                          #)
+
+  
+
+    return render_template("instructions.html")
 
 
 @app.route('/pricing')
@@ -44,6 +67,8 @@ def getbutton():
     global testtext
     testtext = request.json
     return "good job!"
+
+
 
 
 app.run(host='0.0.0.0', port=81)
