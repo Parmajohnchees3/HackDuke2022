@@ -4,6 +4,7 @@ from flask_socketio import SocketIO
 from twilio.rest import Client
 import os
 
+
 auth_token = os.environ['auth_token']
 account_sid = os.environ['account_sid']
 
