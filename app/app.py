@@ -39,11 +39,11 @@ def test():
 
 @app.route('/results')
 def results():
-    data = {'time':["0", "1", "2", "3", "4", "5"], 'Velocity':["1", "5", "8", "10", "10", "20"]}
+    data = testtext
     
     #tdata = [0, 1, 2, 3, 4, 5]
     #vdata = [1, 5, 8, 10, 10, 10]
-    return render_template("results.html", data = data)
+    return render_template("results.html", data=data)
 
 @app.route('/instructions')
 def instructions():
@@ -69,7 +69,7 @@ def pricing():
 def getbutton():
     global currentNum
     global testtext
-    testtext = request.json
+    testtext = request.get_json()
     return "good job!"
 
 
