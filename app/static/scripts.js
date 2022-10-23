@@ -21,15 +21,19 @@ new Chart("myChart", {
     legend: {display: false},
     scales: {
       yAxes:[{
-      scaleLabel: {
+        scaleLabel: {
         display: true,
-        labelString: 'Velocity (m/s)'
+          fontColor: "black",
+          fontSize: 25,
+        labelString: 'Velocity (inches/second)'
       },
       ticks: {min: 0, max:Math.max(...yValues)*1.1}
     }],
      xAxes: [{
      scaleLabel: {
      display: true,
+       fontColor: "black",
+       fontSize: 25,
      labelString: 'Time (seconds)'
      },
       ticks: {min: 0, max:1000}
@@ -38,6 +42,8 @@ new Chart("myChart", {
     },
     title: {
       display: true,
+      fontColor: "black",
+      fontSize: 35,
       text: "Velocity of Breath Chart"
     }
   }

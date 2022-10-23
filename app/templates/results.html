@@ -1,11 +1,22 @@
 {% extends "base.html" %}
 
-
 {% block content %}
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-<div><canvas id="myChart" style="width:60%;max-width:1000px"></canvas>
-<section id="myResults" class="demo"></div>
+
+<section id="myResults" class="demo" style="background-image:url(/static/assets/results.png);">
+  <canvas id="myChart" style="width:60%;max-width:1000px;" ></canvas>
+  <table>
+  <tr>
+    <th>FVC</th>
+    <th>FEV1</th>
+    <th>FEV1/FVC</th>
+  </tr>
+  <tr>
+    <td>312</td>
+    <td>213</td>
+    <td>0.45</td>
+  </tr>
+</table>
 
 </section>
 

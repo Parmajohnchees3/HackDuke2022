@@ -13,8 +13,9 @@ client = Client(account_sid, auth_token)
 
 app = Flask(__name__)
 
-currentResult = ""
-
+global currentResult
+#currentResult = ""
+currentResult = {"time":[],"velocity":[],"ticks":552}
 @app.route('/')
 def index():
     return render_template("index.html")
@@ -44,28 +45,32 @@ def results():
 def instructions():
 
     #Send TEXT "Your test results are ready to view..."
-    #message = client.messages.create(
-                    #body='Your test results are ready to be viewed',
-                    #from_='+14632558992',
-                    #to='+12569988636'
-                          #)
-
-  
-
     return render_template("instructions.html")
-
-
-@app.route('/pricing')
-def pricing():
-    return testtext["Hello, World!"]
 
 
 @app.route('/button', methods=['POST'])
 def getbutton():
+    global currentResult
     currentResult = request.get_json()
+    print(currentResult["time"])
     return "good job!"
-
-
-
-
+  #message = client.messages.create(
+#                     #body='Your results have been processed. Please go to this link to view them',
+#                     #from_='+14632558992',
+#                     #to='ENTER-PHONE-NUMBER'
+#                           #)
+  
 app.run(host='0.0.0.0', port=81)
+
+def calcFVC(times, velos):
+  #at each time we have velocity
+  #convert veto m/s
+  return 5
+
+def calcFEV(times, velos):
+  
+  return 5
+
+def calcFVCFEV(times, velos):
+  
+  return 5
