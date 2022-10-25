@@ -5,19 +5,25 @@
 
 <section id="myResults" class="demo" style="background-image:url(/static/assets/results.png);">
   <canvas id="myChart" style="width:60%;max-width:1000px;" ></canvas>
-  <table>
+  <h8>
+
+    <table>
   <tr>
     <th>FVC</th>
-    <th>FEV1</th>
-    <th>FEV1/FVC</th>
+    <td>{{myfvc}}</td>
   </tr>
   <tr>
-    <td>312</td>
-    <td>213</td>
-    <td>0.45</td>
+    <th>FEV1</th>
+    <td>{{myfev}}</td>
+  </tr>
+  <tr>
+    <th>FEV1/FVC</th>
+    <td>{{myfevfvc}}</td>
   </tr>
 </table>
 
+  </h8>
+  
 </section>
 
 <script type="text/javascript">

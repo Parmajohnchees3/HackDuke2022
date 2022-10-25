@@ -95,7 +95,18 @@ section h6 {
   font : normal 300 56px/1 'Josefin Sans', sans-serif;
   white-space: nowrap;
 }
-
+table {
+   position: absolute;
+  top: 50%;
+  left: 80%;
+  z-index: 2;
+  -webkit-transform: translate(-70%, -70%);
+  transform: translate(-70%, -70%);
+  color: #000;
+  font : normal 300 25px/1 'Josefin Sans', sans-serif;
+  white-space: nowrap;
+  border: 1px solid;
+}
 canvas {
     padding: 0;
     margin: auto;
@@ -107,10 +118,21 @@ canvas {
     bottom: 0;
     right: 500;
 }
+table1 {
+    padding: 0;
+    margin: auto;
+    display: block;
+    width: 800px;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 1000;
+}
 
 #section01 { background: url(/static/assets/updatedhome.png) center center / cover no-repeat;}
-#section02 { background: url(/static/assets/lowcost.png) center center / cover no-repeat;}
-#section03 { background: url(/static/assets/whatis.png) center center / cover no-repeat;}
+#section02 { background: url(/static/assets/2.png) center center / cover no-repeat;}
+#section03 { background: url(/static/assets/3.png) center center / cover no-repeat;}
 #section04 { background: url(/static/assets/aboutus.png) center center / cover no-repeat;}
 #section05 { background: url(/static/assets/aboutus.png) center center / cover no-repeat;}
 #section06 { background: url(https://picsum.photos/1200/800?image=901) center center / cover no-repeat;}
